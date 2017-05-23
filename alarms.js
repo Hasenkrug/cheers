@@ -1,13 +1,12 @@
 (function() {
     'use strict';
+
     var alarmName = 'remindme';
 
     function checkAlarm(callback) {
-
         chrome.alarms.getAll(function(alarms) {
-
             var hasAlarm = alarms.some(function(a) {
-                return a.name == "remindme";
+                return a.name == alarmName;
             });
 
             var newLabel;

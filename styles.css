@@ -27,7 +27,6 @@ label {
 
 .btn {
     background-color: #4CAF50;
-    /* Green */
     border: none;
     color: white;
     padding: 10px 25px;
@@ -39,5 +38,8 @@ label {
 }
 
 .btn:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 1px 5px 25px -5px rgba(0,0,0,0.53);
+  -moz-box-shadow: 1px 5px 25px -5px rgba(0,0,0,0.53);
+  box-shadow: 1px 5px 25px -5px rgba(0,0,0,0.53);
+    cursor: pointer;
 }

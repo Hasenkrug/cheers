@@ -1,5 +1,4 @@
-function showNotification(storedData) {
-    // Now create the notification
+function showNotification() {
     chrome.notifications.create('reminder', {
         type: 'basic',
         iconUrl: 'icon_128.png',
