@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Cheers!</title>
+</head>
+
+<body>
+    <main>
+        <h1>Du weißt ja, genügend trinken ist wichtig!</h1>
+        <p>Aus diesem Grund, habe ich diese kleine Extension geschrieben.</p>
+        <p>Sie erinnert dich jede Stunde daran, dass du dir einen Moment Zeit zum trinken nehmen sollst. Möchtest du häufiger, oder seltener erinnert werden, dann aktiviere die Erinnerungen mit einem frei gewählten Wert.
+            <p>
+                <p>Ein kleiner Tipp: die Angabe des Intervalls sollte in Minuten erfolgen. :></p>
+                <div class="input-background">
+                    <label for="delayInMinutes">Gib hier den Interval der Erinnerungen an.</label>
+                    <input type="text" id="delayInMinutes" placeholder="Default: 60">
+                </div>
+    </main>
+    <footer id="info">
+        <button class="btn" id="toggleAlarm">Aktiviere Erinnerungen</button>
+    </footer>
+    <script src="background.js"></script>
+    <script src="helpers.js"></script>
+    <script src="alarms.js"></script>
+</body>
+
+</html>

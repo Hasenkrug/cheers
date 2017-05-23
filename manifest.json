@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Trinken!",
+    "description": "Die Erweiterung soll dich einfach daran erinnern, dass du auch ab und zu was trinken musst.",
+    "version": "1",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "permissions": ["alarms", "notifications", "background"],
+    "browser_action": {
+        "default_icon": "icon_19.png",
+        "default_popup": "index.html",
+        "default_title": "Der ultimative Trink-Reminder"
+    },
+    "background": {
+        "scripts": [
+            "background.js",
+            "alarms.js",
+            "helpers.js"
+        ],
+        "persistent": true
+    },
+    "minimum_chrome_version": "28"
+}
