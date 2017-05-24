@@ -2,24 +2,36 @@
     'use strict';
 
     var alarmName = 'remindme';
+    var periodInMinutes = '';
 
     /**
      *  check state and change label and icon
      */
     function checkAlarm(callback) {
         chrome.alarms.getAll(function(alarms) {
+
             var hasAlarm = alarms.some(function(a) {
-                return a.name == alarmName;
+                if (a.name == alarmName) {
+                    periodInMinutes = a.periodInMinutes;
+                    return true;
+                }
+                return false;
             });
 
             var newLabel;
             if (hasAlarm) {
                 newLabel = 'Deaktiviere Erinnerungen';
-                chrome.browserAction.setIcon({path: "icon_16-full.png"});
+                document.getElementById('delayInMinutes').value = periodInMinutes;
+                chrome.browserAction.setIcon({
+                    path: "icon_16-full.png"
+                });
             } else {
                 newLabel = 'Aktiviere Erinnerungen';
-                chrome.browserAction.setIcon({path: "icon_16-empty.png"});
+                chrome.browserAction.setIcon({
+                    path: "icon_16-empty.png"
+                });
             }
+
             document.getElementById('toggleAlarm').innerText = newLabel;
 
             if (callback) callback(hasAlarm);
@@ -46,8 +58,8 @@
         chrome.notifications.create('reminder', {
             type: 'basic',
             iconUrl: 'icon_128.png',
-            title: 'Kurze Info:',
-            message: 'Der Reminder ist jetzt aktiv!'
+            title: 'Info:',
+            message: 'Die Erinnerungen sind jetzt aktiv!'
         }, function(notificationId) {});
     }
 
@@ -59,9 +71,11 @@
         chrome.notifications.create('reminder', {
             type: 'basic',
             iconUrl: 'icon_128.png',
-            title: 'Kurze Info:',
-            message: 'Der Reminder ist jetzt inaktiv!'
+            title: 'Info:',
+            message: 'Die Erinnerungen sind jetzt inaktiv!'
         }, function(notificationId) {});
+
+        document.getElementById('delayInMinutes').value = '';
     }
 
     /**
@@ -78,9 +92,6 @@
         });
     }
 
-    /**
-     *  get the input value
-     */
     function userInput() {
         return document.getElementById('delayInMinutes').value;
     }
