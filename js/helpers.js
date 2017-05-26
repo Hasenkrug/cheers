@@ -2,8 +2,8 @@
     'use strict';
 
     // return array of selected elements - $$('img.dog')
-    window.$ = document.querySelectorAll.bind(document);
+    window.$$ = document.querySelectorAll.bind(document);
     // returns first element selected - $('input[name="food"]')
-    window.$$ = document.querySelector.bind(document);
+    window.$ = document.querySelector.bind(document);
 
 })(window);

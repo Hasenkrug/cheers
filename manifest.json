@@ -4,21 +4,21 @@
     "description": "Die Erweiterung soll dich einfach daran erinnern, dass du auch ab und zu was trinken musst.",
     "version": "1.3",
     "icons": {
-        "16": "icon_16-empty.png",
-        "48": "icon_48.png",
-        "128": "icon_128.png"
+        "16": "img/icon_16-empty.png",
+        "48": "img/icon_48.png",
+        "128": "img/icon_128.png"
     },
     "permissions": ["alarms", "notifications", "background"],
     "browser_action": {
-        "default_icon": "icon_16-empty.png",
+        "default_icon": "img/icon_16-empty.png",
         "default_popup": "index.html",
         "default_title": "Der ultimative Trink-Reminder"
     },
     "background": {
         "scripts": [
-            "notification.js",
-            "alarms.js",
-            "helpers.js"
+            "js/notification.js",
+            "js/alarms.js",
+            "js/helpers.js"
         ],
         "persistent": true
     },

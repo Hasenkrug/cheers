@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'moon-flower';
+    src: url('font/Moon_Flower.ttf') format('truetype');
+}
+
 body {
-    /*font-family: 'Roboto', sans-serif;*/
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Inconsolata', monospace;*/
     width: 325px;
 }
 
@@ -25,10 +30,12 @@ label.right {
 }
 
 h1 {
+  font-family: 'moon-flower', monospace;
     position: absolute;
-    margin-left: 50px;
+    margin-top: 3px;
+    margin-left: 43px;
     font-weight: 100;
-    font-size: 29px;
+    font-size: 50px;
 }
 
 img {
@@ -49,7 +56,9 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Inconsolata', monospace;*/
+    font-weight: 300;
     font-size: 16px;
     margin-top: 10px;
 }
