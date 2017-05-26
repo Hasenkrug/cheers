@@ -54,6 +54,7 @@
             delayInMinutes: userDelay,
             periodInMinutes: userDelay
         }
+        
         chrome.alarms.create(alarmName, alarmInfo);
         chrome.notifications.create('reminder', {
             type: 'basic',

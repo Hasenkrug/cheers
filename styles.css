@@ -1,5 +1,6 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Inconsolata', monospace;
     width: 325px;
 }
 
@@ -23,6 +24,17 @@ label.right {
     margin-left: 5px;
 }
 
+h1 {
+    position: absolute;
+    margin-left: 50px;
+    font-weight: 100;
+    font-size: 29px;
+}
+
+img {
+  margin-top: 3px;
+}
+
 .input-background {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -37,6 +49,7 @@ label.right {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'Inconsolata', monospace;
     font-size: 16px;
     margin-top: 10px;
 }

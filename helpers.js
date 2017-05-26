@@ -1,8 +1,9 @@
 (function(window) {
     'use strict';
 
-    // Cache the querySelector/All for easier and faster reuse
+    // return array of selected elements - $$('img.dog')
     window.$ = document.querySelectorAll.bind(document);
+    // returns first element selected - $('input[name="food"]')
     window.$$ = document.querySelector.bind(document);
 
 })(window);
