@@ -1,5 +1,5 @@
 (function() {
-  //'use strict';
+  'use strict';
 
   var alarmName = 'remindme';
   var periodInMinutes = '';
@@ -23,12 +23,12 @@
         newLabel = 'Deaktiviere Erinnerungen';
         document.getElementById('delayInMinutes').value = periodInMinutes;
         chrome.browserAction.setIcon({
-          path: "img/icon_16-full.png"
+          path: 'img/icon_16-full.png'
         });
       } else {
         newLabel = 'Aktiviere Erinnerungen';
         chrome.browserAction.setIcon({
-          path: "img/icon_16-empty.png"
+          path: 'img/icon_16-empty.png'
         });
       }
 
@@ -46,7 +46,7 @@
     // default delay of 60 seconds
     var userDelay = 60;
 
-    if (userInput() != "") {
+    if (userInput() != '') {
       userDelay = parseInt(userInput());
     }
 
@@ -70,7 +70,7 @@
   function cancelAlarm() {
     chrome.alarms.clear(alarmName);
     chrome.browserAction.setBadgeText({
-      text: ""
+      text: ''
     });
     chrome.notifications.create('reminder', {
       type: 'basic',

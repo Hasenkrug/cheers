@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Cheers!",
     "description": "Die Erweiterung soll dich einfach daran erinnern, dass du auch ab und zu was trinken musst.",
-    "version": "1.3",
+    "version": "1.4",
     "icons": {
         "16": "img/icon_16-empty.png",
         "48": "img/icon_48.png",
