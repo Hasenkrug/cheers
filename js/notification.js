@@ -3,6 +3,7 @@
 
   var myNotificationID = null;
   var myNotificationCount = 0;
+  var cheersers = ['٩(͡o.๏)۶', '٩(-̮̮̃•̃)۶', '٩(̾●̮̮̃̾•̃̾)۶', '٩(-̮̮̃-̃)۶', '٩(×̯×)۶', '{｡^◕‿◕^｡}', '(ñ_ñ)', 'o(≧o≦)o', '\n(~￣▽￣)~ now i know', '(⊙_◎)', '(~￣▽￣)~', ' (︶ω︶)'];
 
   /**
    *  popup opened handler
@@ -38,10 +39,17 @@
       type: 'basic',
       iconUrl: 'img/icon_128.png',
       title: 'Denk dran,',
-      message: 'du musst auch mal was trinken! ٩(͡๏̯͡๏)۶'
+      message: 'du musst auch mal was trinken! ' + getCheerser()
     }, function(id) {
       myNotificationID = id;
     });
+  }
+
+  /**
+   *  returns a random cheerser
+   */
+  function getCheerser() {
+    return cheersers[Math.floor(Math.random() * cheersers.length)];
   }
 
   /**

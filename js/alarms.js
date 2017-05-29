@@ -60,7 +60,7 @@
       type: 'basic',
       iconUrl: 'img/icon_128.png',
       title: 'Info:',
-      message: 'Die Erinnerungen sind jetzt aktiv!'
+      message: 'Die Erinnerungen sind jetzt aktiviert!'
     }, function(notificationId) {});
   }
 
@@ -76,7 +76,7 @@
       type: 'basic',
       iconUrl: 'img/icon_128.png',
       title: 'Info:',
-      message: 'Die Erinnerungen sind jetzt inaktiv!'
+      message: 'Die Erinnerungen sind jetzt deaktiviert!'
     }, function(notificationId) {});
 
     document.getElementById('delayInMinutes').value = '';
@@ -96,11 +96,14 @@
     });
   }
 
+  $('#toggleAlarm').addEventListener('click', doToggleAlarm);
+
+  /**
+   *  returns the value from the delayInMinutes input field
+   */
   function userInput() {
     return document.getElementById('delayInMinutes').value;
   }
-
-  $('#toggleAlarm').addEventListener('click', doToggleAlarm);
 
   checkAlarm();
 
