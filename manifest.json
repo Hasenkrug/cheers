@@ -3,8 +3,6 @@
     "name": "Cheers!",
     "description": "Die Erweiterung erinnert dich, dass du auch ab und zu was trinken musst.",
     "version": "1.4.1",
-    "default_locale": "de",
-    "homepage_url": "https://github.com/Hasenkrug/cheers",
     "icons": {
         "16": "img/icon_16-empty.png",
         "48": "img/icon_48.png",
@@ -24,5 +22,6 @@
         ],
         "persistent": true
     },
+    "homepage_url": "https://github.com/Hasenkrug/cheers",
     "minimum_chrome_version": "28"
 }
